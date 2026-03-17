@@ -36,15 +36,14 @@ echo"</pre>";
 
 
 
-/*acteurs dans un film : 939243 -> id du film
+//acteurs dans un film : 939243 -> id du film
 $url = "https://api.themoviedb.org/3/movie/939243/credits?api_key=$key";
-$response = getProxy($url);
-//$response = file_get_contents("https://api.themoviedb.org/3/movie/939243/credits?api_key=$key");
+$response = file_get_contents("https://api.themoviedb.org/3/movie/939243/credits?api_key=$key");
 $result = json_decode($response, true);
 echo"<pre>";
 print_r($result['cast']);
 echo"</pre>";
-*/
+
 
 
 
@@ -60,15 +59,14 @@ print_r($result['results']);
 echo"</pre>";
 */
 
-/*détails sur un acteur : id -> 206 Jim Carrey
+//détails sur un acteur : id -> 206 Jim Carrey
 $url = "https://api.themoviedb.org/3/person/206?api_key=$key&language=fr-FR";
-$response = getProxy($url);
-//$response = file_get_contents("https://api.themoviedb.org/3/person/206?api_key=$key&language=fr-FR");
+$response = file_get_contents("https://api.themoviedb.org/3/person/206?api_key=$key&language=fr-FR");
 $result = json_decode($response, true);
 echo"<pre>";
 print_r($result);
 echo"</pre>";
-*/
+
 
 /*principaux films d'un acteur : id -> 206 Jim Carrey 
 $url = "https://api.themoviedb.org/3/person/206/combined_credits?api_key=$key&language=fr-FR";

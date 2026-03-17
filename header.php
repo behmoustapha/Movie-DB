@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <title>Movies</title>
+    <title>Films</title>
   
   <style>
     .form-outline i {
@@ -33,10 +33,10 @@
       <div class="navbar-collapse collapse" id="collapsingNavbar3">
         <ul class="navbar-nav justify-content-center">
             <li class="nav-item active">
-              <a class="nav-link" href="popular.php">Top films</a>
+              <a class="nav-link" href="popular.php">Films populaires</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="topRated.php">Top Rated</a>
+              <a class="nav-link" href="topRated.php">Les mieux notés</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,18 +46,18 @@
                   <li><a class="dropdown-item" href="genreMovies.php?id=28">Action</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=12">Aventure</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=16">Animation</a></li>
-                  <li><a class="dropdown-item" href="genreMovies.php?id=35">Comedy</a></li>
+                  <li><a class="dropdown-item" href="genreMovies.php?id=35">Comedie</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=80">Crime</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=99">Documentaire</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=18">Drama</a></li>
-                  <li><a class="dropdown-item" href="genreMovies.php?id=10751">Familly</a></li>
-                  <li><a class="dropdown-item" href="genreMovies.php?id=14">Fantasy</a></li>
+                  <li><a class="dropdown-item" href="genreMovies.php?id=10751">Familliale</a></li>
+                  <li><a class="dropdown-item" href="genreMovies.php?id=14">Fantaisie</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=36">Histoire</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=27">Horreur</a></li>
-                  <li><a class="dropdown-item" href="genreMovies.php?id=10402">Music</a></li>
+                  <li><a class="dropdown-item" href="genreMovies.php?id=10402">Musique</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=878">Science Fiction</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=53">Thriller</a></li>
-                  <li><a class="dropdown-item" href="genreMovies.php?id=10752">War</a></li>
+                  <li><a class="dropdown-item" href="genreMovies.php?id=10752">Guerre</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=37">Western</a></li>
               </ul>
             </li>

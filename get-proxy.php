@@ -1,4 +1,5 @@
 <?php
+//Proxy du lycée
 function getProxy($url){
     $options = [
         'http' => [
