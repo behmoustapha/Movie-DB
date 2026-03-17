@@ -43,8 +43,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
 
     function acteurs($movieId){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
-      $url = "https://api.themoviedb.org/3/movie/939243/credits?api_key=$key";
-      $response = file_get_contents("https://api.themoviedb.org/3/movie/939243/credits?api_key=$key");
+      $url = "https://api.themoviedb.org/3/movie/$movieId/credits?api_key=$key";
+      $response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId/credits?api_key=$key");
       
       $result = json_decode($response, true);
       return $result['cast'];
@@ -52,13 +52,30 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
 
     function acteur($actorId){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
-      $url = "https://api.themoviedb.org/3/person/206?api_key=$key&language=fr-FR";
-      $response = file_get_contents("https://api.themoviedb.org/3/person/206?api_key=$key&language=fr-FR");
+      $url = "https://api.themoviedb.org/3/person/$actorId?api_key=$key&language=fr-FR";
+      $response = file_get_contents("https://api.themoviedb.org/3/person/$actorId?api_key=$key&language=fr-FR");
       
       $result = json_decode($response, true);
       return $result;
     }
 
+    function topFilms($actorId){
+      $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
+      $url = "https://api.themoviedb.org/3/person/$actorId/combined_credits?api_key=$key&language=fr-FR";
+      $response = file_get_contents("https://api.themoviedb.org/3/person/$actorId/combined_credits?api_key=$key&language=fr-FR");
+      
+      $result = json_decode($response, true);
+      return $result['results'];
+    }
+
+    function search($query){
+      $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
+      $url = "https://api.themoviedb.org/3/search/$query?api_key=$key&language=fr-FR";
+      $response = file_get_contents("https://api.themoviedb.org/3/search/$query?api_key=$key&language=fr-FR");
+      
+      $result = json_decode($response, true);
+      return $result['results'];
+    }
     
 ?>
 

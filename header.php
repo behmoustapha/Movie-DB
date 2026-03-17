@@ -33,10 +33,10 @@
       <div class="navbar-collapse collapse" id="collapsingNavbar3">
         <ul class="navbar-nav justify-content-center">
             <li class="nav-item active">
-              <a class="nav-link" href="popular.php">Films populaires</a>
+              <a class="nav-link" href="popular.php">Populaires</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="topRated.php">Les mieux notés</a>
+              <a class="nav-link" href="topRated.php">Mieux notés</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@
         <ul class="nav navbar-nav w-100 justify-content-end">
           
             <div data-mdb-input-init class="form-outline  me-3 ">
-            <form action="#" id="search-moviess"  method="get">
+            <form action="tests.php" id="search-movies"  method="get">
               <input type="text" class="form-control ps-5 rounded-pill" placeholder="Search Films" name="query" style="max-width:200px;" />
               <i class="bi-search ms-3"></i>
             </form>

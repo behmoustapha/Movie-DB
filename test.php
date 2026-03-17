@@ -95,15 +95,13 @@ echo"</pre>";
 // voir : https://blog.hubspot.fr/website/iframe?hubs_content=blog.hubspot.fr/website/inserer-video-html&hubs_content-cta=Iframe
 // exemple la clé : KtF7DvnsEig vous permet de visionner la bande annonce de Sonic3
 // <iframe width="672" height="378" src="https://www.youtube.com/embed/KtF7DvnsEig" frameborder="0" allowfullscreen></iframe>
-    /*obtenir les clés pour les vidéos Youtube
+    //obtenir les clés pour les vidéos Youtube
     $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
     $url = "https://api.themoviedb.org/3/movie/939243/videos?api_key=$key&language=fr-FR";
-    $response = getProxy($url);
-    //$response = file_get_contents("https://api.themoviedb.org/3/movie/939243/videos?api_key=$key&language=fr-FR");
-    $result = json_decode($resonse, true);
+    $response = file_get_contents("https://api.themoviedb.org/3/movie/939243/videos?api_key=$key&language=fr-FR");
+    $result = json_decode($response, true);
     echo"<pre>";
     print_r($result['results']);
     echo"</pre>";
-    */
 
 ?>
