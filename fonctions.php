@@ -86,5 +86,14 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
       $result = json_decode($response, true);
       return $result['results'];
     }
+
+    function trailer($movieId){
+      $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
+      $url = "https://api.themoviedb.org/3/movie/$movieId/videos?api_key=$key&language=fr-FR";
+      $response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId/videos?api_key=$key&language=fr-FR");
+      
+      $result = json_decode($response, true);
+      return $result['results'];
+    }
 ?>
 

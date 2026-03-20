@@ -5,6 +5,7 @@ $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
 
 
 //films les plus populaires
+/*
 $url = "https://api.themoviedb.org/3/movie/popular?api_key=$key&language=fr-FR";
 $response = getProxy($url);
 //$response = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=$key&language=fr-FR");
@@ -12,16 +13,17 @@ $result = json_decode($response, true);
 echo"<pre>";
 print_r($result);
 echo"</pre>";
-
-/*films les mieux notés
+*/
+//films les mieux notés
 $url = "https://api.themoviedb.org/3/movie/top_rated?api_key=$key&language=fr-FR";
-$response = getProxy($url);
-//$response = file_get_contents("https://api.themoviedb.org/3/movie/top_rated?api_key=$key&language=fr-FR");
+$response = file_get_contents("https://api.themoviedb.org/3/movie/top_rated?api_key=$key&language=fr-FR");
 $result = json_decode($response, true);
 echo"<pre>";
 print_r($result['results']);
+print_r($result['total_pages']);
+
 echo"</pre>";
-*/
+
 
 /*obtenir le détail d'un film
 $movieId = 76600; // Ex: ID du film "Avatar"
@@ -37,13 +39,14 @@ echo"</pre>";
 
 
 //acteurs dans un film : 939243 -> id du film
+/*
 $url = "https://api.themoviedb.org/3/movie/939243/credits?api_key=$key";
 $response = file_get_contents("https://api.themoviedb.org/3/movie/939243/credits?api_key=$key");
 $result = json_decode($response, true);
 echo"<pre>";
 print_r($result['cast']);
 echo"</pre>";
-
+*/
 
 
 
@@ -60,13 +63,14 @@ echo"</pre>";
 */
 
 //détails sur un acteur : id -> 206 Jim Carrey
+/*
 $url = "https://api.themoviedb.org/3/person/206?api_key=$key&language=fr-FR";
 $response = file_get_contents("https://api.themoviedb.org/3/person/206?api_key=$key&language=fr-FR");
 $result = json_decode($response, true);
 echo"<pre>";
 print_r($result);
 echo"</pre>";
-
+*/
 
 /*principaux films d'un acteur : id -> 206 Jim Carrey 
 $url = "https://api.themoviedb.org/3/person/206/combined_credits?api_key=$key&language=fr-FR";
@@ -93,8 +97,10 @@ echo"</pre>";
 
 //intégrer des vidéos
 // voir : https://blog.hubspot.fr/website/iframe?hubs_content=blog.hubspot.fr/website/inserer-video-html&hubs_content-cta=Iframe
-// exemple la clé : KtF7DvnsEig vous permet de visionner la bande annonce de Sonic3
-// <iframe width="672" height="378" src="https://www.youtube.com/embed/KtF7DvnsEig" frameborder="0" allowfullscreen></iframe>
+// exemple la clé : KtF7DvnsEig vous permet de visionner la bande annonce de Sonic3*
+/*
+    $kkey = "KtF7DvnsEig" ;
+    echo"<iframe width='672' height='378' src='https://www.youtube.com/embed/$kkey' frameborder='0' allowfullscreen></iframe>";
     //obtenir les clés pour les vidéos Youtube
     $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
     $url = "https://api.themoviedb.org/3/movie/939243/videos?api_key=$key&language=fr-FR";
@@ -104,4 +110,5 @@ echo"</pre>";
     print_r($result['results']);
     echo"</pre>";
 
-?>
+?>  
+*/

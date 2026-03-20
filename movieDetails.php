@@ -4,6 +4,7 @@
 <?php  $movieId = $_GET['movieId']; ?>
 <?php  $details = details($movieId); ?>
 <?php  $acteurs = acteurs($movieId); ?>
+<?php  $trailer = trailer($movieId); ?>
 
 
 
@@ -20,6 +21,15 @@
       </div>
   </div>
 </div>
+
+
+
+<?php foreach($trailer as $trailer) : ?> 
+  <?php $t = $trailer['key']?> 
+  <?php echo"<iframe width='672' height='378' src='https://www.youtube.com/embed/$t' frameborder='0' allowfullscreen></iframe>"; ?> 
+     <?php endforeach; ?>
+
+
 
 
 <?php foreach($acteurs as $acteurs) : ?>  
