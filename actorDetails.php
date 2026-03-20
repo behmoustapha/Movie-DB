@@ -39,7 +39,7 @@
               <p class=" lh-sm">
                 <strong><?php echo $films['title']; ?></strong>
               </p>
-              <button type="button" class="btn btn-primary mt-auto" onclick="location.href='actorDetails.php?actorId=<?=$films['id']?>'" >Profil</button>
+              <button type="button" class="btn btn-primary mt-auto" onclick="location.href='movieDetails.php?movieId=<?=$films['id']?>'" >Description</button>
             </div>
           </div>
         </div>

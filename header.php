@@ -65,13 +65,13 @@
         <ul class="nav navbar-nav w-100 justify-content-end">
           
             <div data-mdb-input-init class="form-outline  me-3 ">
-            <form action="tests.php" id="search-movies"  method="get">
+            <form action="searchM.php" id="search-movies"  method="get">
               <input type="text" class="form-control ps-5 rounded-pill" placeholder="Search Films" name="query" style="max-width:200px;" />
               <i class="bi-search ms-3"></i>
             </form>
             </div>
             <div data-mdb-input-init class="form-outline  me-3">
-            <form action="#" id="search-acteurs"  method="get">
+            <form action="searchA.php" id="search-acteurs"  method="get">
               <input type="text" class="form-control ps-5 rounded-pill " placeholder="Search Acteurs" name="query" style="max-width:200px;"/>
               <i class="bi-search ms-3"></i>
             </form>
