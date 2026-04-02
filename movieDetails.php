@@ -33,8 +33,7 @@
 
 
 <?php foreach($acteurs as $acteurs) : ?>  
-        <div class="container">
-          <div class="card shadow-sm ">
+          <div class="card shadow-sm row-cols-md-4 g-4 ">
             <img src="<?php echo 'https://image.tmdb.org/t/p/w780/'.$acteurs['profile_path']; ?>" >
             <div class="card-body lh-sm d-flex flex-column">    
               <p class=" lh-sm">

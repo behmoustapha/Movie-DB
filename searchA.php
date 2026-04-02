@@ -6,7 +6,7 @@
 
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
-       <h4>Films les plus populaires</h4>
+       <?php echo"<h4>Résultats pour '$query' </h4>" ?>
      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
      <?php foreach($searchA as $actor) : ?>  
         <div class="d-flex align-items-stretchl">
