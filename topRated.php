@@ -1,11 +1,18 @@
 <?php require("header.php"); ?>
 <?php require("fonctions.php"); ?>
-
-<?php  $topRated = topRated(); ?>
+<?php 
+  $page = 1; 
+  $pagee = $_GET['page'];
+  if($pagee == NULL or $pagee < 0){
+    $pagee = 0;
+  }
+  $pagesuivante = $page + $pagee; 
+?>
+<?php  $topRated = topRated($pagesuivante); ?>
 
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
-       <h4>Films les plus populaires</h4>
+       <h4>Films les mieux notés</h4>
      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
      <?php foreach($topRated as $movie) : ?>  
         <div class="d-flex align-items-stretchl">

@@ -17,7 +17,7 @@
                 <strong><?php echo $actor['name']; ?></strong>
               </p>
              <button type="button" class="btn btn-primary mt-auto" onclick="location.href='actorDetails.php?actorId=<?=$actor['id']?>'" >Profil</button>
-            </div>
+            </div> 
           </div>
         </div>
      <?php endforeach; ?>
@@ -26,3 +26,4 @@
 </div>
 
 <?php require("footer.php"); ?>
+<?php  ?>

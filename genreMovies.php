@@ -1,14 +1,21 @@
 <?php require("header.php"); ?>
 <?php require("fonctions.php"); ?>
-
+<?php 
+  $page = 1; 
+  $pagee = $_GET['page'];
+  if($pagee == NULL or $pagee < 0){
+    $pagee = 0;
+  }
+  $pagesuivante = $page + $pagee; 
+?>
 <?php  $id = $_GET['id']; ?>
-<?php  $genre = genre($id); ?>
+<?php  $genre = genre($id, $pagesuivante); ?>
 
 
 
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
-       <h4>Films les plus populaires</h4>
+       <h4>Films trié par genre</h4>
      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
      <?php foreach($genre as $movie) : ?>  
         <div class="d-flex align-items-stretchl">

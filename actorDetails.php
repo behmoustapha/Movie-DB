@@ -32,7 +32,7 @@
                   else{
                     echo("Date de naissance: ". "Non renseigné");
                   }
-                   ?></p
+                   ?></p>
                 <p><?php 
                   if($details['place_of_birth'] != NULL){
                     echo("Lieu de naissance: ". $details['place_of_birth']);
@@ -41,7 +41,7 @@
                   else{
                     echo("Non renseigné");
                   }
-                   ?></p
+                   ?></p>
               </div>
       </div>
   </div>

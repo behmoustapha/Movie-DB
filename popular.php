@@ -1,7 +1,14 @@
 <?php require("header.php"); ?>
 <?php require("fonctions.php"); ?>
-
-<?php  $popularMovies = popularMovies(); ?>
+<?php 
+  $page = 1; 
+  $pagee = $_GET['page'];
+  if($pagee == NULL or $pagee < 0){
+    $pagee = 0;
+  }
+  $pagesuivante = $page + $pagee;
+?>
+<?php  $popularMovies = popularMovies($pagesuivante); ?> 
 
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
