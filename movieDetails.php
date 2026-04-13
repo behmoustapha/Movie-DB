@@ -8,11 +8,14 @@
 
 
 
+
+
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
             <img src="<?php echo 'https://image.tmdb.org/t/p/w780/'.$details['poster_path']; ?>" >
-              <div style="">
+            
+              <div class="">
                 <p class="lh-sm">
                 <h1><?php echo $details['title']; ?> </h1>
               </p> 

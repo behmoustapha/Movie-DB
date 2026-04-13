@@ -31,4 +31,6 @@
   </div>
 </div>
 
+<h4 class="text-center">Page <?php print("$pagee/ $pagemax"); ?> </h4>
+
 <?php require("footer.php"); ?>
