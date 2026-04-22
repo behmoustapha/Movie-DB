@@ -8,12 +8,15 @@
 
 
 
-
-
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-            <img src="<?php echo 'https://image.tmdb.org/t/p/w780/'.$details['poster_path']; ?>" >
+            <img src="<?php 
+            if ($details['poster_path'] == null){
+              echo 'images/default-non-user-no-photo-1.jpg';
+            }else{
+              echo 'https://image.tmdb.org/t/p/w780/'.$details['poster_path'];
+            }?>" >
             
               <div class="">
                 <p class="lh-sm">
@@ -34,7 +37,7 @@
 </div>
 
 <p class="lh-sm">
-  <h2 class="text-center">Bande annonce(s)</h2>
+  <h2 class="text-center">Bande annonce</h2>
 </p> 
 
 <div class="container">
@@ -45,14 +48,15 @@
 <?php foreach($trailer as $trailer) : ?> 
   <?php $t = $trailer['key']?> 
   <?php echo"<iframe width='672' height='378' src='https://www.youtube.com/embed/$t' frameborder='0' allowfullscreen></iframe>"; ?> 
-     <?php endforeach; ?>
+    <?php break; ?> 
+    <?php endforeach; ?>
     </div>
     <div class="col">
     </div>  
   </div>
 </div>
 
-<h2 class="text-center">Acteurs</h2>
+<h2 class="text-center">Principaux acteurs</h2>
 
 
 <div class="album py-5 bg-body-tertiary ">
@@ -62,7 +66,12 @@
           <div class="col">
             <div class="card h-100 shadow-sm">
 
-            <img src="<?php echo 'https://image.tmdb.org/t/p/w780/'.$acteurs['profile_path']; ?>" >
+            <img src="<?php 
+            if ($details['poster_path'] == null){
+              echo 'images/default-non-user-no-photo-1.jpg';
+            }else{
+              echo 'https://image.tmdb.org/t/p/w780/'.$acteurs['profile_path'];
+            }?>" >
             <div class="card-body d-flex flex-column">    
               <p class=" card-text">
                 <strong><?php echo $acteurs['name']; ?></strong>
@@ -79,4 +88,4 @@
 
 
 
-<?php require("footer.php"); ?>
+<?php require("footerOther.php"); ?>

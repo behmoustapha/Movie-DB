@@ -73,4 +73,4 @@
 
 
 
-<?php require("footer.php"); ?>
+<?php require("footerOther.php"); ?>
