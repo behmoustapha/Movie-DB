@@ -8,8 +8,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
         global $pagemax;
         $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
         $url = "https://api.themoviedb.org/3/movie/popular?api_key=$key&language=fr-FR&page=$page";
-        //$response = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=$key&language=fr-FR");
-        $response = getProxy($url);
+        $response = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=$key&language=fr-FR&page=$page");
+        //$response = getProxy($url);
         $result = json_decode($response, true);
         $pagemax = $result['total_pages'];
         return $result['results'];
@@ -20,8 +20,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
         global $pagemax;
         $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
         $url = "https://api.themoviedb.org/3/movie/top_rated?api_key=$key&language=fr-FR&page=$page";
-        //$response = file_get_contents("https://api.themoviedb.org/3/movie/top_rated?api_key=$key&language=fr-FR");
-        $response = getProxy($url);
+        $response = file_get_contents("https://api.themoviedb.org/3/movie/top_rated?api_key=$key&language=fr-FR&page=$page");
+        //$response = getProxy($url);
        
         $result = json_decode($response, true);
         $pagemax = $result['total_pages'];
@@ -32,8 +32,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
         global $pagemax;
         $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
         $url = "https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id&page=$page";
-        //$response = file_get_contents("https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id");
-        $response = getProxy($url);
+        $response = file_get_contents("https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id&page=$page");
+        //$response = getProxy($url);
         $result = json_decode($response, true);
         $pagemax = $result['total_pages'];
         return $result['results'];
@@ -42,8 +42,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
     function details($movieId){
         $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
         $url = "https://api.themoviedb.org/3/movie/$movieId?api_key=$key&language=fr-FR";
-        //$response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId?api_key=$key&language=fr-FR");
-        $response = getProxy($url);
+        $response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId?api_key=$key&language=fr-FR");
+        //$response = getProxy($url);
         $result = json_decode($response, true);
         return $result;
       }
@@ -52,8 +52,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
     function acteurs($movieId){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
       $url = "https://api.themoviedb.org/3/movie/$movieId/credits?api_key=$key";
-      //$response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId/credits?api_key=$key");
-      $response = getProxy($url);
+      $response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId/credits?api_key=$key");
+      //$response = getProxy($url);
       
       $result = json_decode($response, true);
       return $result['cast'];
@@ -62,8 +62,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
     function acteur($actorId){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
       $url = "https://api.themoviedb.org/3/person/$actorId?api_key=$key&language=fr-FR";
-      //$response = file_get_contents("https://api.themoviedb.org/3/person/$actorId?api_key=$key&language=fr-FR");
-      $response = getProxy($url);
+      $response = file_get_contents("https://api.themoviedb.org/3/person/$actorId?api_key=$key&language=fr-FR");
+      //$response = getProxy($url);
 
       $result = json_decode($response, true);
       return $result;
@@ -72,8 +72,8 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
     function topFilms($actorId){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
       $url = "https://api.themoviedb.org/3/person/$actorId/combined_credits?api_key=$key&language=fr-FR";
-      //$response = file_get_contents("https://api.themoviedb.org/3/person/$actorId/combined_credits?api_key=$key&language=fr-FR");
-      $response = getProxy($url);
+      $response = file_get_contents("https://api.themoviedb.org/3/person/$actorId/combined_credits?api_key=$key&language=fr-FR");
+      //$response = getProxy($url);
 
       $result = json_decode($response, true);
       return $result['cast'];
@@ -82,9 +82,9 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
     function searchA($query){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
       $url = "https://api.themoviedb.org/3/search/person?query=$query&api_key=$key&language=fr-FR";
-      //$response = file_get_contents("https://api.themoviedb.org/3/search/person?query=$query&api_key=$key&language=fr-FR");
+      $response = file_get_contents("https://api.themoviedb.org/3/search/person?query=$query&api_key=$key&language=fr-FR");
       
-      $response = getProxy($url);
+      //$response = getProxy($url);
       $result = json_decode($response, true);
       return $result['results'];
     }
@@ -92,9 +92,9 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
     function searchM($query){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
       $url = "https://api.themoviedb.org/3/search/movie?query=$query&api_key=$key&language=fr-FR";
-      //$response = file_get_contents("https://api.themoviedb.org/3/search/movie?query=$query&api_key=$key&language=fr-FR");
+      $response = file_get_contents("https://api.themoviedb.org/3/search/movie?query=$query&api_key=$key&language=fr-FR");
       
-      $response = getProxy($url);
+      //$response = getProxy($url);
       $result = json_decode($response, true);
       return $result['results'];
     }
@@ -102,9 +102,9 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
     function trailer($movieId){
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
       $url = "https://api.themoviedb.org/3/movie/$movieId/videos?api_key=$key&language=fr-FR";
-      //$response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId/videos?api_key=$key&language=fr-FR");
+      $response = file_get_contents("https://api.themoviedb.org/3/movie/$movieId/videos?api_key=$key&language=fr-FR");
       
-      $response = getProxy($url);
+      //$response = getProxy($url);
       $result = json_decode($response, true);
       return $result['results'];
     }
