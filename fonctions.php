@@ -11,7 +11,7 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
         $response = file_get_contents("https://api.themoviedb.org/3/movie/popular?api_key=$key&language=fr-FR&page=$page");
         //$response = getProxy($url);
         $result = json_decode($response, true);
-        $pagemax = $result['total_pages'];
+        $pagemax = $result['total_pages'] - 1;
         return $result['results'];
       }
 
@@ -24,7 +24,7 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
         //$response = getProxy($url);
        
         $result = json_decode($response, true);
-        $pagemax = $result['total_pages'];
+        $pagemax = $result['total_pages'] - 1;
         return $result['results'];
       }
 
@@ -32,10 +32,10 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
         global $pagemax;
         $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
         $url = "https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id&page=$page";
-        $response = file_get_contents("https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id");
+        $response = file_get_contents("https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id&page=$page");
         //$response = getProxy($url);
         $result = json_decode($response, true);
-        $pagemax = $result['total_pages'];
+        $pagemax = $result['total_pages'] - 1;
         return $result['results'];
       }
     
@@ -79,23 +79,27 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
       return $result['cast'];
     }
 
-    function searchA($query){
+    function searchA($query, $page){
+      global $pagemax;
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
-      $url = "https://api.themoviedb.org/3/search/person?query=$query&api_key=$key&language=fr-FR";
-      $response = file_get_contents("https://api.themoviedb.org/3/search/person?query=$query&api_key=$key&language=fr-FR");
+      $url = "https://api.themoviedb.org/3/search/person?query=$query&api_key=$key&language=fr-FR&page=$page";
+      $response = file_get_contents("https://api.themoviedb.org/3/search/person?query=$query&api_key=$key&language=fr-FR&page=$page");
       
       //$response = getProxy($url);
       $result = json_decode($response, true);
+      $pagemax = $result['total_pages'] - 1;
       return $result['results'];
     }
     
-    function searchM($query){
+    function searchM($query, $page){
+      global $pagemax;
       $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
-      $url = "https://api.themoviedb.org/3/search/movie?query=$query&api_key=$key&language=fr-FR";
-      $response = file_get_contents("https://api.themoviedb.org/3/search/movie?query=$query&api_key=$key&language=fr-FR");
+      $url = "https://api.themoviedb.org/3/search/movie?query=$query&api_key=$key&language=fr-FR&page=$page";
+      $response = file_get_contents("https://api.themoviedb.org/3/search/movie?query=$query&api_key=$key&language=fr-FR&page=$page");
       
       //$response = getProxy($url);
       $result = json_decode($response, true);
+      $pagemax = $result['total_pages'] - 1;
       return $result['results'];
     }
 

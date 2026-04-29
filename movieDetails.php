@@ -13,7 +13,7 @@
      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
             <img src="<?php 
             if ($details['poster_path'] == null){
-              echo 'images/default-non-user-no-photo-1.jpg';
+              echo 'images/no-image.jpg';
             }else{
               echo 'https://image.tmdb.org/t/p/w780/'.$details['poster_path'];
             }?>" >
