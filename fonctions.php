@@ -32,7 +32,7 @@ require_once("get-proxy.php");// au lycée pour faire des requêtes https nous a
         global $pagemax;
         $key = "9e43f45f94705cc8e1d5a0400d19a7b7";
         $url = "https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id&page=$page";
-        $response = file_get_contents("https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id&page=$page");
+        $response = file_get_contents("https://api.themoviedb.org/3/discover/movie?api_key=$key&language=fr-FR&with_genres=$id");
         //$response = getProxy($url);
         $result = json_decode($response, true);
         $pagemax = $result['total_pages'];

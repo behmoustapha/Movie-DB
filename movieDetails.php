@@ -67,7 +67,7 @@
             <div class="card h-100 shadow-sm">
 
             <img src="<?php 
-            if ($details['poster_path'] == null){
+            if ($acteurs['profile_path'] == null){
               echo 'images/default-non-user-no-photo-1.jpg';
             }else{
               echo 'https://image.tmdb.org/t/p/w780/'.$acteurs['profile_path'];
